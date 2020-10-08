@@ -17,18 +17,13 @@ class Menu extends React.Component {
       return(
         <BrowserRouter>
           <Route exact path="/parcialI" component={Menu}>
-            <div>
-    <div className="SignIn">
-     <h1>SignIn</h1>
-     <Form
-        onSubmit={this.onSubmit}
-        validate={this.validate}
-        render={Form1}
-  />
-    </div>
-  );
-          
-            </div>
+          <div className="formContainer">
+            <Form
+                onSubmit={this.onSubmit}
+                validate={this.validate}
+                render={Form1}
+              />   
+          </div>
             <Link to="/editForm">
               Go to edit
             </Link>
