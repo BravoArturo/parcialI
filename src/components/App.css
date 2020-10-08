@@ -1,0 +1,29 @@
+.App {
+  text-align: center;
+}
+.App-header {
+  display: flex;
+  flex-direction: row;
+  height: 100px;
+  width: 800px;
+  align-items: center;
+  justify-content: center;
+}
+.caratula {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  height: 100px;
+  width: 500px;
+  justify-content: center;
+}
+.logo {
+  display: flex;
+  height: 100px;
+  width: 300px;
+  justify-content: center;
+}
+.imgUai {
+  height: 100px;
+  width: 300px;
+}
