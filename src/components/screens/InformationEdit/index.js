@@ -13,12 +13,12 @@ class InformationEdit extends React.Component {
           <Link to="/counter">
             Go to counter
           </Link>
-          <Link to="/">
+          <Link to="/parcialI">
             Go back
           </Link>
         </Route>
           <Route exact path="/Counter" component={Counter}></Route>
-          <Route exact path="/" component={Menu}></Route>
+          <Route exact path="/parcialI" component={Menu}></Route>
         </BrowserRouter>
       );
     }
