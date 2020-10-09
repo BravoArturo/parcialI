@@ -1,19 +1,33 @@
 import './style.css';
 import React from 'react';
 import { BrowserRouter, Link, Route } from 'react-router-dom';
-import InformationEdit from '../InformationEdit';
+import Form from '../Form';
+import data from '../../data';
 
 class Counter extends React.Component {
     render(){
       return(
         <BrowserRouter>
         <Route exacth path="/Counter" component={Counter}>
-        <div>hola soy el contador</div>
-          <Link to="/editForm">
+        {
+        data.Counter.map(counter =>
+        <div className="bodyOfCounter">
+            <div>Creado:{counter.created}</div>
+            <div>Actualizado:{counter.updated}</div>
+            <div>
+              <button>-</button>
+              <label>{counter.counterOfCounter}</label>
+              <button>+</button>
+              <button>ELIMINAR</button>
+            </div>
+        </div>
+        )  
+        }
+          <Link to="/parcialI">
             Go back
           </Link>
         </Route>
-          <Route exact path="/editForm" component={InformationEdit}></Route>
+          <Route exact path="/parcialI" component={Form}></Route>
         </BrowserRouter>
       );
     }
