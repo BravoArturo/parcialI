@@ -4,8 +4,22 @@ import { BrowserRouter, Link, Route } from 'react-router-dom';
 import InformationEdit from '../InformationEdit';
 import { Form } from 'react-final-form';
 import Form1 from '../Form';
+import data from '../../data'
 
 class Menu extends React.Component {
+  constructor(props){
+    super(props)
+    this.state= {
+      this:data.Alumno[0].name = 'ingrese nombre',
+      this:data.Alumno[0].year = 2020,
+    }
+  }
+  handleInputChange = (event) => {
+    this.setState({
+      this:data.Alumno[0].name = event.target("name").value,
+      this:data.Alumno[0].name = event.target("year").value,
+    })
+  }
   onSubmit(values) {
     console.log('Submitting form', values);
   }
