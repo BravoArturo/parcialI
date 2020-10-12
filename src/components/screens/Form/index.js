@@ -17,7 +17,7 @@ function Form(props) {
                 <div>
                   <Field className="inputField" name="year" component="input" disabled="disable" placeholder={data.Alumno[0].year} />
                 </div>
-                <div >
+                <div>
                   <Link className="link" to="/editForm">
                     <button className="buttonS">Editar Información</button>
                   </Link>
@@ -36,7 +36,7 @@ function Form(props) {
                 <div>
                   <Field className="inputField" name="year" component="input" placeholder={data.Alumno[0].year} />
                 </div>
-                <div >
+                <div>
                   <Link className="link" to="/parcialI">
                     <button className="buttonS" onClick={props.handleInputChange} >Guardar Información</button>
                   </Link>

@@ -15,17 +15,9 @@ constructor(props) {
           created: Date(),
           updated: 0,
           counter: 0
-        },
-        {
-          id: 1,
-          created: Date(),
-          updated: 0,
-          counter: 0
-        }
-      ]
-      }
+        }]
     }
-
+  }
     increment = (id, event) => {
       const index = this.state.counters.findIndex((counter)=>{
         return counter.id === id
