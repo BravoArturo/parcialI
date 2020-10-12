@@ -10,14 +10,14 @@ class Menu extends React.Component {
     super(props)
     this.state= {
       this:data.Alumno[0].name = 'ingrese nombre',
-      this:data.Alumno[0].year = 2020,
+      this:data.Alumno[0].year = 2020
     }
   }
 
   handleInputChange = (event) => {
     this.setState({
       this:data.Alumno[0].name = event.target("name").value,
-      this:data.Alumno[0].name = event.target("year").value,
+      this:data.Alumno[0].name = event.target("year").value
     })
   }
 

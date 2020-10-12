@@ -3,7 +3,6 @@ import React from 'react';
 import { BrowserRouter, Link, Route } from 'react-router-dom';
 import Form from '../Form';
 import Counter1 from '../Counter/counter1.js';
-import counter from '../Counter/counter1.js';
 
 class Counter extends React.Component {
  
@@ -15,43 +14,43 @@ constructor(props) {
           id: 0,
           created: Date(),
           updated: 0,
-          counter: 5,
+          counter: 0
         },
         {
           id: 1,
           created: Date(),
           updated: 0,
-          counter: 7
+          counter: 0
         }
       ]
       }
     }
 
-    increment = (id, e) => {
-      const counterss = this.state.counters.find((counter) =>{
+    increment = (id, event) => {
+      const index = this.state.counters.findIndex((counter)=>{
         return counter.id === id
       });
-      const counter = Object.assign([], this.state.counters[id]);
-      counter.counter =+1;
+      const counter = Object.assign({}, this.state.counters[index]);
+      counter.counter ++;
+      counter.updated = Date();
       const counters = Object.assign([], this.state.counters);
-      counters[counterss] = counter;
-      this.setState({counters:counters});
-      }
-       
-    decrement = (id, e) => {
-      const counterss = this.state.counters.find((counter) =>{
-        return counter.id === id
-      });
-      const counter = Object.assign([], this.state.counters[id]);
-      counter.counter =-1;
-      const counters = Object.assign([], this.state.counters);
-      counters[counterss] = counter;
+      counters[index] = counter;
       this.setState({counters:counters});
       return;
-      }
-
- 
-
+    }
+    decrement = (id, event) => {
+      const index = this.state.counters.findIndex((counter)=>{
+        return counter.id === id
+      });
+      const counter = Object.assign({}, this.state.counters[index]);
+      counter.counter --;
+      counter.updated = Date();
+      const counters = Object.assign([], this.state.counters);
+      counters[index] = counter;
+      this.setState({counters:counters});
+      return;
+    }
+    
     deleteCounter = (id, event) => {
       const counters = Object.assign([], this.state.counters);
       counters.splice(id, 1);
@@ -65,14 +64,12 @@ constructor(props) {
         id: this.state.counters.length,
         created: Date(),
         updated: 0,
-        counter:0
+        counter: 0
       });
       this.setState({counters:counters});
       return;
     }
       
-
-
     render(){
       return(
         <BrowserRouter>
@@ -86,11 +83,17 @@ constructor(props) {
                       created={counter.created}
                       updated={counter.updated}
                       counter={counter.counter}
+                      increment={this.increment.bind(this, counter.id)}
+                      decrement={this.decrement.bind(this, counter.id)}
                       deleteCounter={this.deleteCounter.bind(this, counter.id)}
                     />)
                   })
                 }
               </ul>
+              {
+
+                
+              }
             </div>
           <Link to="/parcialI">
             GO BACK

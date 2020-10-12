@@ -10,9 +10,9 @@ const counter = (props) => {
             {props.updated}
         </li>
         <li>
-            <button>-</button>
+            <button onClick={props.decrement} value={props.counter}>-</button>
             <div>{props.counter}</div>
-            <button>+</button>
+            <button onClick={props.increment} value={props.counter}>+</button>
             <button onClick={props.deleteCounter}>ELIMINAR</button>
         </li>
     </ul>)
