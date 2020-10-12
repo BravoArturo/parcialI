@@ -5,18 +5,6 @@ const data ={
         name: null,
         year: null
     }
-],
-    Counter:[{
-        created: null,
-        updated: null,
-        counterOfCounter: null
-    },
-    {
-        created: Date(),
-        updated: 0,
-        counterOfCounter: 0
-        
-    }
-    ] 
+]
 }
 export default data;

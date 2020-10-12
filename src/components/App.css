@@ -1,32 +1,14 @@
 .App {
-  text-align: center;
-}
-.App-header {
   display: flex;
-  flex-direction: row;
-  height: 300px;
-  width: 100%;
+  margin: 0;
+  padding: 0;
   align-items: center;
+  box-sizing: border-box;
+  outline: none;
   justify-content: center;
-  border: solid black;
-}
-.caratula {
-  display: flex;
-  flex-direction: column;
-  list-style: none;
-  height: 300px;
-  width: 70%;
-  justify-content: center;
-  border: solid black;
-}
-.logo {
-  display: flex;
-  height: 50px;
   width: 100%;
-  justify-content: center;
-}
-.imgUai {
-  height: 100px;
-  width: 30%;
-  border: solid black;
+  height: 800px;
+  text-align: center;
+  background: url('../assets/Logo/reactLogo2.png');
+  background-size: cover;
 }

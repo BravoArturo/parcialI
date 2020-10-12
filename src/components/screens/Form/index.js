@@ -5,51 +5,43 @@ import data from '../../data.js';
 import { BrowserRouter, Link, Route } from 'react-router-dom';
 import Counter from '../Counter';
 
-function add2counter() {
-  data.Counter.push({
-    created: Date(),
-    updated: null,
-    counterOfCounter: 0
-  })
-}
-console.log(data.Counter);
 function Form(props) {
     return (
         <BrowserRouter>
         <Route exact path="/parcialI">
-        <form className="SignInForm">
+        <form className="form">
               <h2>Alumno</h2>
               <div>
-                <Field name="name" component="input" disabled="disable" placeholder={data.Alumno[0].name} />
+                <Field className="inputField" name="name" component="input" disabled="disable" placeholder={data.Alumno[0].name} />
               </div>
               <div>
-                <Field name="year" component="input" disabled="disable" placeholder={data.Alumno[0].year} />
+                <Field className="inputField" name="year" component="input" disabled="disable" placeholder={data.Alumno[0].year} />
               </div>
-              <div className="buttonS">
-                <Link to="/editForm">
-                  <button >Editar Información</button>
+              <div >
+                <Link className="link" to="/editForm">
+                  <button className="buttonS">Editar Información</button>
                 </Link>
-                <Link to="/Counter">
-                  <button onClick={add2counter}>Agregar Contador</button>
+                <Link className="link" to="/Counter">
+                  <button className="buttonS">Agregar Contador</button>
                 </Link>
               </div>
         </form>
         </Route>
         <Route exact path="/editForm">
-          <form className="SignInForm">
+          <form className="form">
                 <h2>Alumno</h2>
                 <div>
-                  <Field name="name" component="input" placeholder={data.Alumno[0].name} />
+                  <Field className="inputField" name="name" component="input" placeholder={data.Alumno[0].name} />
                 </div>
                 <div>
-                  <Field name="year" component="input" placeholder={data.Alumno[0].year} />
+                  <Field className="inputField" name="year" component="input" placeholder={data.Alumno[0].year} />
                 </div>
                 <div className="buttonS">
-                  <Link to="/parcialI">
-                    <button type="Enviar" onClick={props.handleInputChange} >Guardar Información</button>
+                  <Link className="link" to="/parcialI">
+                    <button className="buttonS" type="Enviar" onClick={props.handleInputChange} >Guardar Información</button>
                   </Link>
-                  <Link to="/Counter">
-                    <button >Agregar Contador</button>
+                  <Link className="link" to="/Counter">
+                    <button className="buttonS">Agregar Contador</button>
                   </Link>
                 </div>
           </form>

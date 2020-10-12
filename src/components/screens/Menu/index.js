@@ -5,22 +5,6 @@ import { Form } from 'react-final-form';
 import Form1 from '../Form';
 import data from '../../data'
 
-var Counter= [{
-    created: Date(),
-    updated: 0,
-    counterOfCounter: 0 
-}
-] 
-
-function HookCounterFour() {
-  const [counters, setItems] = useState([])
-  const addItem = () => {
-    setItems([...counters, {
-      id: counters.length,
-      value: Counter
-    }])
-  }
-}
 class Menu extends React.Component {
   constructor(props){
     super(props)
@@ -29,15 +13,18 @@ class Menu extends React.Component {
       this:data.Alumno[0].year = 2020,
     }
   }
+
   handleInputChange = (event) => {
     this.setState({
       this:data.Alumno[0].name = event.target("name").value,
       this:data.Alumno[0].name = event.target("year").value,
     })
   }
+
   onSubmit(values) {
     console.log('Submitting form', values);
   }
+
   validate(values) {
     if (values && values.firstName && values.firstName.length < 3);
     console.log('El nombre debe ser mayor a 3 caracteres');
@@ -47,7 +34,7 @@ class Menu extends React.Component {
         <BrowserRouter>
           <Route exact path="/parcialI" component={Menu}>
           <div className="formContainer">
-            <Form
+            <Form 
                 onSubmit={this.onSubmit}
                 validate={this.validate}
                 render={Form1}
