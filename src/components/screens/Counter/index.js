@@ -75,29 +75,27 @@ constructor(props) {
         <BrowserRouter>
         <Route exacth path="/Counter" component={Counter}>
             <div className = "counter">
-            <button onClick={this.add2counter}>NEW COUNTER</button>
-              <ul>
-                {
-                  this.state.counters.map((counter)=>{
-                    return(<Counter1 id ={counter.id}
-                      created={counter.created}
-                      updated={counter.updated}
-                      counter={counter.counter}
-                      increment={this.increment.bind(this, counter.id)}
-                      decrement={this.decrement.bind(this, counter.id)}
-                      deleteCounter={this.deleteCounter.bind(this, counter.id)}
-                    />)
-                  })
-                }
-              </ul>
-              {
-
-                
-              }
-            </div>
-          <Link to="/parcialI">
-            GO BACK
-          </Link>
+            <button onClick={this.add2counter} className="buttonCounter">NEW COUNTER</button>
+              <div className="counterBack">
+                <ul>
+                  {
+                    this.state.counters.map((counter)=>{
+                      return(<Counter1 id ={counter.id}
+                        created={counter.created}
+                        updated={counter.updated}
+                        counter={counter.counter}
+                        increment={this.increment.bind(this, counter.id)}
+                        decrement={this.decrement.bind(this, counter.id)}
+                        deleteCounter={this.deleteCounter.bind(this, counter.id)}
+                      />)
+                    })
+                  }
+                </ul>
+                <Link to="/parcialI" className="link">
+                  <button className="buttonCounter">GO BACK</button>
+                </Link>
+                </div>
+              </div>    
         </Route>
           <Route exact path="/parcialI" component={Form}></Route>
         

@@ -2,18 +2,18 @@ import { render } from '@testing-library/react';
 import React from 'react';
 
 const counter = (props) => {
-    return(<ul>
+    return(<ul className="boxCounter">
         <li>
-            {props.created}
+            Creado:{props.created}
         </li>
         <li>
-            {props.updated}
+            Actualizado:{props.updated}
         </li>
-        <li>
-            <button onClick={props.decrement} value={props.counter}>-</button>
+        <li className="counterDirection">
+            <button onClick={props.decrement} value={props.counter} className="buttonCounter">-</button>
             <div>{props.counter}</div>
-            <button onClick={props.increment} value={props.counter}>+</button>
-            <button onClick={props.deleteCounter}>ELIMINAR</button>
+            <button onClick={props.increment} value={props.counter} className="buttonCounter">+</button>
+            <button onClick={props.deleteCounter} className="buttonCounter">ELIMINAR</button>
         </li>
     </ul>)
 }

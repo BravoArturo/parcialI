@@ -4,7 +4,9 @@
     flex-direction: column;
     background-color: #FFC0CB;
     border-radius: 5px;
+    color: white;
 }
+
 .form {
     display: flex;
     height: 100%;
@@ -21,4 +23,7 @@
 
 .link {
     text-decoration: none;
+}
+button:hover {
+    cursor: pointer;
 }

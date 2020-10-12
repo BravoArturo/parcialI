@@ -1,3 +1,30 @@
 .counter {
-    color: red;
+    display: flex;
+    flex-direction: row;
+    color: white;
+}
+.counterDirection {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.buttonCounter {
+    background-color: #FFC0CB;
+    border-radius: 5px;
+    color: white;
+}
+.boxCounter {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+    flex-direction: column;
+    border: solid  #FFC0CB;
+    margin: 5px;
+    padding: 5px;
+}
+.counterBack {
+    display: flex;
+    flex-direction: column;
 }
