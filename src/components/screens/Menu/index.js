@@ -3,22 +3,23 @@ import React , { useState } from 'react';
 import { BrowserRouter, Link, Route } from 'react-router-dom';
 import { Form } from 'react-final-form';
 import Form1 from '../Form';
-import data from '../../data'
 
 class Menu extends React.Component {
   constructor(props){
     super(props)
     this.state= {
-      this:data.Alumno[0].name = 'ingrese nombre',
-      this:data.Alumno[0].year = 2020
+     Alumno: {
+       name: 'ingrese nombre',
+       year: 2020
+     }
     }
   }
 
   handleInputChange = (event) => {
-    this.setState({
-      this:data.Alumno[0].name = event.target("name").value,
-      this:data.Alumno[0].name = event.target("year").value
-    })
+    const Alumno = Object.assign({}, this.state.Alumno);
+    Alumno.name = event.target("name").value;
+    Alumno.year = event.target("year").value;
+    this.setState({Alumno:Alumno});
   }
 
   onSubmit(values) {
@@ -38,6 +39,8 @@ class Menu extends React.Component {
                 onSubmit={this.onSubmit}
                 validate={this.validate}
                 render={Form1}
+                name = {this.state.Alumno.name}
+                year ={this.state.Alumno.year}
               />   
           </div>
           </Route>
