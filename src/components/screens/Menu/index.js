@@ -1,6 +1,6 @@
 import './style.css';
 import React , { useState } from 'react';
-import { BrowserRouter, Link, Route } from 'react-router-dom';
+import { BrowserRouter, Link, Route, Redirect } from 'react-router-dom';
 import { Form } from 'react-final-form';
 import Form1 from '../Form';
 
@@ -33,6 +33,7 @@ class Menu extends React.Component {
     render(){
       return(
         <BrowserRouter>
+        <Redirect to="/parcialI"/>
           <Route exact path="/parcialI" component={Menu}>
           <div className="formContainer">
             <Form 
