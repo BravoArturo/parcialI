@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/parcialI/static/css/main.be9dced8.chunk.css",
+    "main.css": "/parcialI/static/css/main.d9582b4f.chunk.css",
     "main.js": "/parcialI/static/js/main.655fabfe.chunk.js",
     "main.js.map": "/parcialI/static/js/main.655fabfe.chunk.js.map",
     "runtime-main.js": "/parcialI/static/js/runtime-main.cf1810ab.js",
@@ -8,16 +8,16 @@
     "static/js/2.30208652.chunk.js": "/parcialI/static/js/2.30208652.chunk.js",
     "static/js/2.30208652.chunk.js.map": "/parcialI/static/js/2.30208652.chunk.js.map",
     "index.html": "/parcialI/index.html",
-    "precache-manifest.b052a09c2a117d86e034a8819dec0587.js": "/parcialI/precache-manifest.b052a09c2a117d86e034a8819dec0587.js",
+    "precache-manifest.c999cc5d4b9e4968e257c137fefae1a1.js": "/parcialI/precache-manifest.c999cc5d4b9e4968e257c137fefae1a1.js",
     "service-worker.js": "/parcialI/service-worker.js",
-    "static/css/main.be9dced8.chunk.css.map": "/parcialI/static/css/main.be9dced8.chunk.css.map",
+    "static/css/main.d9582b4f.chunk.css.map": "/parcialI/static/css/main.d9582b4f.chunk.css.map",
     "static/js/2.30208652.chunk.js.LICENSE.txt": "/parcialI/static/js/2.30208652.chunk.js.LICENSE.txt",
     "static/media/reactLogo2.png": "/parcialI/static/media/reactLogo2.0f6d8194.png"
   },
   "entrypoints": [
     "static/js/runtime-main.cf1810ab.js",
     "static/js/2.30208652.chunk.js",
-    "static/css/main.be9dced8.chunk.css",
+    "static/css/main.d9582b4f.chunk.css",
     "static/js/main.655fabfe.chunk.js"
   ]
 }
