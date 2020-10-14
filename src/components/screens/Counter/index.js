@@ -69,7 +69,7 @@ class Counter extends React.Component{
           <div className = "counter">
             <button onClick={this.add2counter} className="buttonCounter">NEW COUNTER</button>
             <div className="counterBack">
-              <ul>
+              <ul className="wrap">
               {
               this.state.counters.map((counter)=>{
                 return(
